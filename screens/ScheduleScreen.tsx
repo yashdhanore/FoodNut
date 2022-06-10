@@ -1,10 +1,15 @@
 import React from "react";
 import { StyleSheet, View, Text } from "react-native";
 
-export default function PreferenceScreen() {
+export default function PreferenceScreen({ route }) {
+  const { gender, height, weight, age, target } = route.params;
   return (
     <View style={styles.container}>
-      <Text>Welcome</Text>
+      <Text>Gender: {JSON.stringify(gender)}</Text>
+      <Text>Height: {JSON.stringify(height)}</Text>
+      <Text>Weight: {JSON.stringify(weight)}</Text>
+      <Text>Age: {JSON.stringify(age)}</Text>
+      <Text>Target: {JSON.stringify(target)}</Text>
     </View>
   );
 }
